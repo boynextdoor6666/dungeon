@@ -1,0 +1,65 @@
+body {
+    background-color: #222222;
+    color: #ffffff;
+    font-family: 'Press Start 2P', cursive;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #ff00ff;
+    text-shadow: 2px 2px #0000ff;
+}
+
+a {
+    color: #00ffff;
+}
+
+a:hover {
+    color: #ff00ff;
+}
+
+form label {
+    color: #00ffff;
+}
+
+button {
+    background-color: #ff00ff;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-shadow: 1px 1px #0000ff;
+}
+
+button:hover {
+    background-color: #00ffff;
+}
+
+table {
+    border: 2px solid #ff00ff;
+    width: 100%;
+}
+
+table th, table td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ff00ff;
+}
+
+table th {
+    background-color: #00ffff;
+    color: #222222;
+}
+
+table td {
+    background-color: #222222;
+    color: #ffffff;
+}
+
+input[type="text"] {
+    background-color: #222222;
+    color: #ffffff;
+    border: 2px solid #ff00ff;
+    padding: 5px;
+    font-family: 'Press Start 2P', cursive;
+}

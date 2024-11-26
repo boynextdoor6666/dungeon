@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Contact</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<h1>ИЗМЕНИТЬ ИМЯ ЗАКЛАДЧИКА</h1>
+<form th:action="@{/persons/{id}(id=${person.id})}" th:object="${person}" method="post">
+    <label>ИМЯ: <input type="text" th:field="*{firstName}"/></label><br/>
+    <label>ФАМИЛИЯ: <input type="text" th:field="*{lastName}"/></label><br/>
+    <button type="submit">СОХРАНИТЬ И ОСТАВИТЬ В ПОКОЕ</button>
+</form>
+<a th:href="@{/persons}">НАЗАД НА РОДИНУ</a>
+</body>
+</html>

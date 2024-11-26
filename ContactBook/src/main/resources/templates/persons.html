@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>КОНТАКТЫ</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<h1>СПИСОК КОНТАКТОВ</h1>
+<form th:action="@{/persons/search}" method="get">
+    <input type="text" name="query" placeholder="найти">
+    <button type="submit">НАЙТИ ЗАКЛАДЧИКА</button>
+</form>
+<a th:href="@{/persons/new}">ДОБАВИТЬ НОВЫЙ КОНТАКТ</a>
+<table>
+    <tr>
+        <th>ИМЯ(МЯСО)</th>
+        <th>ФАМИЛИЯ</th>
+        <th>ДЕЙСТВИЯ</th>
+    </tr>
+    <tr th:each="person : ${persons}">
+        <td th:text="${person.firstName}"></td>
+        <td th:text="${person.lastName}"></td>
+        <td>
+            <a th:href="@{/persons/edit/{id}(id=${person.id})}">ИЗМЕНИТЬ</a>
+            <a th:href="@{/persons/delete/{id}(id=${person.id})}" onclick="return confirm('УВЕРЕН')">УДАЛИТЬ</a>
+        </td>
+    </tr>
+</table>
+</body>
+</html>
+
+
